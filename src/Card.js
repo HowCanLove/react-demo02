@@ -8,6 +8,12 @@ class Card extends Component {
 			showDetails: false
 		}
 	}
+	toggleDetail(){
+		console.log(this);
+		this.setState({
+			showDetails: !this.state.showDetails
+		})
+	}
 	render(){
 		let cardDetails;
 		if(this.state.showDetails){
@@ -18,14 +24,19 @@ class Card extends Component {
 					</div>
 				)
 		}
+		// onClick 写法一
+		// onClick={
+		// 	()=>this.setState({
+		// 		showDetails: !this.state.showDetails
+		// 	})
+		// }
 		return(
 				<div className="card">
 					<div className="card__title"
-					onClick={
-						()=>this.setState({
-							showDetails: !this.state.showDetails
-						})
-					}
+						onClick={
+							// () => this.toggleDetail()
+							this.toggleDetail.bind(this)
+						}
 					>
 						{this.props.title}
 					</div>
