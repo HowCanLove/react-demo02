@@ -36,7 +36,17 @@ let cardsList = [
 		title: "Read the book",
 		description: "I should read the whole book",
 		status: "in-progress",
-		tasks: []
+		tasks: [
+			{
+				id:1,
+				name:"react 开发实战",
+				done: true
+			},{
+				id:2,
+				name:"react Native 用JavaScript开发移动应用",
+				done: false
+			},
+		]
 	},{
 		id: 2,
 		title: "Write some code",
@@ -59,10 +69,20 @@ let cardsList = [
 		]
 	},{
 		id: 3,
-		title: "Know a gril",
-		description: "she name is ***",
+		title: "Know someone",
+		description: "Know somebody",
 		status: "done",
-		tasks: []
+		tasks: [
+			{
+				id: 1,
+				name: "Know a girl",
+				done: true
+			},{
+				id: 2,
+				name: "Know a boy",
+				done: true
+			},
+		]
 	},
 ];
 
