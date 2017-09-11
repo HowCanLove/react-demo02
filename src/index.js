@@ -87,5 +87,6 @@ let cardsList = [
 ];
 
 // ReactDOM.render(<GroceryList />, document.getElementById('root'));
-ReactDOM.render(<KanbanBoard cards={cardsList} name="xin"/>, document.getElementById('root'));
+ReactDOM.render(<KanbanBoard cards={cardsList}/>, document.getElementById('root'));
+// ReactDOM.render((<h1>123</h1>), document.getElementById('root'))
 // registerServiceWorker();

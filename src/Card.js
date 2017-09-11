@@ -9,7 +9,6 @@ class Card extends Component {
 		}
 	}
 	toggleDetail(){
-		console.log(this);
 		this.setState({
 			showDetails: !this.state.showDetails
 		})
