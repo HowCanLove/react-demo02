@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 
 class CheckList extends Component {
 	checkInputKeyPress(e){
-		if(e.key == "Enter"){
+		if(e.key === "Enter"){
 			this.props.taskCallbacks.add(this.props.cardId, e.target.value);
 			e.target.value = '';
 		}

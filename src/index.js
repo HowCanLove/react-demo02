@@ -59,8 +59,9 @@ class ShowThing extends Component {
 	}
 
 	addTask(cardId, taskname){
+		console.log("addTask");
 		let prevState = this.state;
-		let cardIndex = this.state.cards.findIndex(card => card.id == cardId);
+		let cardIndex = this.state.cards.findIndex(card => card.id === cardId);
 
 		let newTask = {
 			id:Date.now(),
@@ -99,7 +100,8 @@ class ShowThing extends Component {
 	}
 	deleteTask(cardId, taskId, taskIndex){
 
-		let cardIndex = this.state.cards.findIndex(card => card.id == cardId);
+		console.log("deleteTask");
+		let cardIndex = this.state.cards.findIndex(card => card.id === cardId);
 
 		let nextState = update(this.state.cards, {
 			[cardIndex]:{
@@ -118,7 +120,7 @@ class ShowThing extends Component {
 	toggleTask(cardId, taskId, taskIndex){
 		console.log("toggleTask");
 
-		let cardIndex = this.state.cards.findIndex(card => card.id == cardId);
+		let cardIndex = this.state.cards.findIndex(card => card.id === cardId);
 
 		let newDoneValue;
 
